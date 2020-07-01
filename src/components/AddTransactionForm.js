@@ -16,7 +16,6 @@ class AddTransactionForm extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="ui segment">
         <form className="ui form">
