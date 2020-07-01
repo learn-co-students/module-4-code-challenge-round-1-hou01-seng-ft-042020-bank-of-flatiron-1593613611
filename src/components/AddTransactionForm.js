@@ -64,7 +64,7 @@ class AddTransactionForm extends Component {
           <button className="ui button" type="submit" onClick={(e)=>{this.props.sortCat(e)}}>
             Sort Transactions by Category
           </button>
-          <button className="ui button" type="submit">
+          <button className="ui button" type="submit" onClick={(e)=>{this.props.sortDescription(e)}}>
             Sort Transactions by Description
           </button>
         </form>

@@ -32,6 +32,14 @@ class AccountContainer extends Component {
   })
   }
 
+  sortDescription=(e)=>{
+    e.preventDefault();
+   let sort= this.state.displayTransactions.sort((a, b)=>{ return (a.description.localeCompare(b.description))})
+   this.setState({
+     displayTransactions: sort
+   })
+   }
+
   addTransaction=(date, description, cat, amount)=>{
     console.log(date, description, cat, amount)
     let options={
@@ -69,7 +77,7 @@ class AccountContainer extends Component {
     return (
       <div>
         <Search searchTransaction={this.searchTransaction}/>
-        <AddTransactionForm addTransaction={this.addTransaction} sortCat={this.sortCat}/>
+        <AddTransactionForm addTransaction={this.addTransaction} sortCat={this.sortCat} sortDescription={this.sortDescription}/>
 
         <TransactionsList transactions={this.state.displayTransactions}/>
       </div>
