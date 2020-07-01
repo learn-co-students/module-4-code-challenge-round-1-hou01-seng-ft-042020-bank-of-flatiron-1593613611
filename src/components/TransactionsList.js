@@ -24,7 +24,7 @@ const TransactionsList = (props) => {
           </th>
         </tr>
         {props.transactions.map(transaction => {
-          if (transaction !== null) return <Transaction transaction={transaction} deleteTransaction={props.deleteTransaction}/>
+          if (transaction !== undefined) return <Transaction transaction={transaction} deleteTransaction={props.deleteTransaction}/>
         })}
       </tbody>
     </table>
