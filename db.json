@@ -83,6 +83,41 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "date": "2020-06-24",
+      "description": "Hanifa",
+      "category": "Clothing",
+      "amount": "-269",
+      "id": 13
+    },
+    {
+      "date": "2020-07-01",
+      "description": "Paetron",
+      "category": "Entertainment",
+      "amount": "-22",
+      "id": 14
+    },
+    {
+      "date": "2020-07-06",
+      "description": "Unemployment",
+      "category": "Income",
+      "amount": "3000",
+      "id": 15
+    },
+    {
+      "date": "2020-07-16",
+      "description": "Airbnb",
+      "category": "Entertainment",
+      "amount": "-1600",
+      "id": 16
+    },
+    {
+      "date": "2019-12-25",
+      "description": "Christmas Check From Grandma",
+      "category": "Gift",
+      "amount": "500",
+      "id": 17
     }
   ]
 }
