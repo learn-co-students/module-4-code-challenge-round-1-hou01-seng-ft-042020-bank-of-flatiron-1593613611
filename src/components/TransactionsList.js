@@ -1,13 +1,15 @@
 import React from "react";
 import Transaction from "./Transaction";
 
+class TransactionsList extends React.Component {
 const TransactionsList = () => {
+  render(){
   return (
     <table className="ui celled striped padded table">
       <tbody>
         <tr>
           <th>
-            <h3 className="ui center aligned header">Date</h3>
+            <h3 className="ui center aligned header" >{this.props.date}</h3>
           </th>
           <th>
             <h3 className="ui center aligned header">Description</h3>
@@ -24,5 +26,8 @@ const TransactionsList = () => {
     </table>
   );
 };
+}
+}
+
 
 export default TransactionsList;
