@@ -84,7 +84,9 @@ class AccountContainer extends Component {
       }
     })
     .then(() => {
-      const newList = this.state.transactions.map(transaction => transaction.id !== transactionId ? transaction : null)
+      const newList = this.state.transactions.map(transaction => {
+        if (transaction.id !== transactionId) return transaction
+      })
       this.setState({
         transactionsDisplayed: newList,
         transactions: newList
@@ -93,6 +95,7 @@ class AccountContainer extends Component {
   }
 
   render() {
+    console.log(this.state)
     if (this.state.transactions === null) return <h1>Loading...</h1>
     return (
       <div>
@@ -109,11 +112,3 @@ class AccountContainer extends Component {
 }
 
 export default AccountContainer;
-
-// {
-  // "id": 1,
-  // "date": "2019-12-01",
-  // "description": "Paycheck from Bob's Burgers",
-  // "category": "Income",
-  // "amount": 1000
-// },
