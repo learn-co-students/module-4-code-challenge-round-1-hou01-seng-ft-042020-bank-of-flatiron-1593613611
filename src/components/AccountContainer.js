@@ -84,9 +84,7 @@ class AccountContainer extends Component {
       }
     })
     .then(() => {
-      const newList = this.state.transactions.map(transaction => {
-        if (transaction.id !== transactionId) return transaction
-      })
+      const newList = this.state.transactions.filter(transaction => transaction.id !== transactionId)
       this.setState({
         transactionsDisplayed: newList,
         transactions: newList
