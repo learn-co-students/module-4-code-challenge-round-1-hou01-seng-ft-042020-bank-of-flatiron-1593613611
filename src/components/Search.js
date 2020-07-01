@@ -6,7 +6,8 @@ const Search = () => {
       <input
         type="text"
         placeholder={"Search your Recent Transactions"}
-        onChange={() => {
+        onChange={(e) => {
+          this.props.changeSearch(e.target.value)
           console.log("Searching...");
         }}
       />
