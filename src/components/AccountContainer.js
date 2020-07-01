@@ -26,7 +26,7 @@ class AccountContainer extends Component {
 
   sortCat=(e)=>{
    e.preventDefault();
-  let sort= this.state.displayTransactions.sort((a, b)=>{a.category.localeCompare(b.category)})
+  let sort= this.state.displayTransactions.sort((a, b)=>{ return (a.category.localeCompare(b.category))})
   this.setState({
     displayTransactions: sort
   })
